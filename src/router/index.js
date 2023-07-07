@@ -1,14 +1,15 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
+import Redirect from '../components/Redirect.vue'
 
 const routes = [
   {
     path: '/',
-    redirect: { name: 'redirect' }, // 轉址路徑
+    redirect: { name: 'Redirect' }, // 轉址路徑
   },
   {
     path: '/redirect',
     name: 'redirect',
-    component: () => import('../components/Redirect.vue'), // 轉址組件
+    component: () => Redirect, // 轉址組件
   },
 ];
 
